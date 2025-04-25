@@ -5,6 +5,12 @@ import unittest
 
 
 class TestHomepage(unittest.TestCase):
+
+
+    def setUp(self):
+        """Sets up the test client"""
+        self.app = app.test_client()
+
     """Tests the route for the homepage"""
     def test_route(self):
         self.app = app.test_client()
@@ -22,6 +28,12 @@ class TestHomepage(unittest.TestCase):
 
 
 class TestDrugSaleArrests(unittest.TestCase):
+
+
+    def setUp(self):
+        """Sets up the test client"""
+        self.app = app.test_client()
+
     """Tests the route for drug sale arrests"""
     def test_route(self):
         self.app = app.test_client()

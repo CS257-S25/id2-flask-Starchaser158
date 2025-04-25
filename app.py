@@ -7,23 +7,20 @@ from ProductionCode.data_procesor import drug_sale_arrests
 app = Flask(__name__)
 
 
-data = []
-
-
 @app.route('/')
 def homepage():
     """Determines the route to the homepage"""
 
     return "Hello! Welcome to our website with the amazingly" \
-    "curated title: Analyzing Criminal Drug Abuse Treatment in Females" \
-    "\nAlso known as drug_abuse_treatment.py" \
-    "\n" \
-    "\n" \
-    "Here are the main usages of our program for your research/interests: " \
-    '\npython3 app.py --meeting ["frequency", "count"]' \
-    '\npython3 app.py --sellArrests lowerBoundCount upperBoundCount' \
-    '\n' \
-    '\nTo reach the drug sale arrests page, take the path /arrests/lower/upper'
+        "curated title: Analyzing Criminal Drug Abuse Treatment in Females" \
+        "\nAlso known as drug_abuse_treatment.py" \
+        "\n" \
+        "\n" \
+        "Here are the main usages of our program for your research/interests: " \
+        '\npython3 app.py --meeting ["frequency", "count"]' \
+        '\npython3 app.py --sellArrests lowerBoundCount upperBoundCount' \
+        '\n' \
+        '\nTo reach the drug sale arrests page, take the path /arrests/lower/upper'
 
 
 
