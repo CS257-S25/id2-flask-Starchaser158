@@ -1,5 +1,6 @@
 """My Individual Flask App specifically for the page for drug sale arrests"""
 
+
 from flask import Flask
 from ProductionCode.data_procesor import drug_sale_arrests
 
@@ -8,8 +9,6 @@ app = Flask(__name__)
 
 data = []
 
-def main():
-    app.run()
 
 @app.route('/')
 def homepage():
@@ -35,4 +34,4 @@ def drug_sale(lower, upper):
 
 
 if __name__ == '__main__':
-    main()
+    app.run()
