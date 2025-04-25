@@ -8,6 +8,8 @@ app = Flask(__name__)
 
 data = []
 
+def main():
+    app.run()
 
 @app.route('/')
 def homepage():
@@ -33,4 +35,4 @@ def drug_sale(lower, upper):
 
 
 if __name__ == '__main__':
-    app.run()
+    main()
