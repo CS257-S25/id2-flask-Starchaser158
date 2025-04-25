@@ -1,18 +1,20 @@
 """Tests the flask app routes"""
 
-from app import *
+
 import unittest
+from app import app
+
 
 
 class TestHomepage(unittest.TestCase):
-
+    """Tests the homepage route"""
 
     def setUp(self):
         """Sets up the test client"""
 
         self.app = app.test_client()
 
-    
+
     def test_homepage(self):
         """Test for route for the homepage"""
 
@@ -30,14 +32,14 @@ class TestHomepage(unittest.TestCase):
 
 
 class TestDrugSaleArrests(unittest.TestCase):
-
+    """Tests the drug sale arrests route"""
 
     def setUp(self):
         """Sets up the test client"""
 
         self.app = app.test_client()
 
-    
+
     def test_drug_sale(self):
         """Test for route for drug sale arrests"""
 
