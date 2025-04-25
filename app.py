@@ -1,9 +1,7 @@
 """My Individual Flask App specifically for the page for drug sale arrests"""
 
 from flask import Flask
-import csv
-import fileinput
-from ProductionCode.data_procesor import *
+from ProductionCode.data_procesor import drug_sale_arrests
 
 app = Flask(__name__)
 
@@ -27,22 +25,11 @@ def homepage():
     '\nTo reach the drug sale arrests page, take the path /arrests/lower/upper'
 
 
-"""Determines the route to the drug sale arrests page"""
+
 @app.route('/arrests/<lower>/<upper>', strict_slashes=False)
 def drug_sale(lower, upper):
+    """Determines the route to the drug sale arrests page"""
     return str(drug_sale_arrests(int(lower), int(upper))) + " people"
-
-
-@app.errorhandler(404)
-def page_not_found(e):
-    """Makes a page for when the user makes a mistake"""
-    return "sorry, wrong format, do this instead...."
-
-
-"""Makes a page for when a bug (our fault) occurs"""
-@app.errorhandler(500)
-def python_bug(e):
-    return "Eek, a bug!"
 
 
 if __name__ == '__main__':
